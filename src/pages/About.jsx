@@ -6,6 +6,7 @@ export default function About() {
   return (
     <div className='about-page-container'>
       <img src={BackgroundImage} alt='Gambar' className='about-hero-image' />
+
       <div className='about-page-content'>
         <h1>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
