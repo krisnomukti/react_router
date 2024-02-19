@@ -13,6 +13,7 @@ import Dashboard from './pages/host/Dashboard';
 import Income from './pages/host/Income';
 import Reviews from './pages/host/Reviews';
 import HostVans from './pages/host/HostVans';
+import HostVanDetail from './pages/host/HostVanDetail';
 
 import '../server/server';
 
@@ -31,6 +32,7 @@ export default function App() {
             <Route path='income' element={<Income />} />
             <Route path='reviews' element={<Reviews />} />
             <Route path='vans' element={<HostVans />} />
+            <Route path='vans/:id' element={<HostVanDetail />} />
           </Route>
         </Route>
       </Routes>
