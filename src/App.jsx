@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout';
+import HostLayout from './components/HostLayout';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -24,9 +25,10 @@ export default function App() {
           <Route path='/vans' element={<Vans />} />
           <Route path='/vans/:id' element={<VansDetail />} />
 
-          <Route path='/dashboard' element={<Dashboard />}>
-            <Route path='/dashboard/income' element={<Income />} />
-            <Route path='/dashboard/reviews' element={<Reviews />} />
+          <Route element={<HostLayout />}>
+            <Route path='/host' element={<Dashboard />} />
+            <Route path='/host/income' element={<Income />} />
+            <Route path='/host/reviews' element={<Reviews />} />
           </Route>
         </Route>
       </Routes>
