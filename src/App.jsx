@@ -1,10 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Layout from './components/Layout';
+
 import Home from './pages/Home';
 import About from './pages/About';
-import Vans from './pages/Vans';
-import VansDetail from './pages/VansDetail';
-import Layout from './components/Layout';
+
+import Vans from './pages/vans/Vans';
+import VansDetail from './pages/vans/VansDetail';
+
+import Dashboard from './pages/host/Dashboard';
+import Income from './pages/host/Income';
+import Reviews from './pages/host/Reviews';
 
 import '../server/server';
 
@@ -17,6 +23,11 @@ export default function App() {
           <Route path='/about' element={<About />} />
           <Route path='/vans' element={<Vans />} />
           <Route path='/vans/:id' element={<VansDetail />} />
+
+          <Route path='/dashboard' element={<Dashboard />}>
+            <Route path='/dashboard/income' element={<Income />} />
+            <Route path='/dashboard/reviews' element={<Reviews />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
